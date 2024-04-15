@@ -1,7 +1,10 @@
 <!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<navigation-bar title="麻雀" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
-    Weixin
+    麻雀，虽小五脏俱全
+    <view bind:tap="navToNextPage" class="mqBtn">功能界面</view>
   </view>
+
+  
 </scroll-view>

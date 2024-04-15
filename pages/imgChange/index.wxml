@@ -1,0 +1,5 @@
+<!--pages/imgChange/index.wxml-->
+<navigation-bar title="修改图片" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<view >
+  <button bind:tap="selectedImg">选择图片</button>
+ </view>

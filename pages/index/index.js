@@ -1,2 +1,8 @@
 // index.js
-Page({})
+Page({
+  navToNextPage:() => {
+    wx.navigateTo({
+      url: '../imgChange/index',
+    })
+  }
+})
