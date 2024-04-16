@@ -1,17 +1,29 @@
 // pages/imgChange/index.js
 Page({
-
-  //0x00000 选择图片
-  selectedImg:()=>{
-    console.log("选择图片")
-  },
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    imgPath: 'https://pic1.zhimg.com/80/v2-0396f0eff4940fe7425f25a2b87b9c8c_1440w.webp'
   },
+  //0x00000 选择图片
+  selectedImg: function()   {
+     
+    let that = this;
+    wx.chooseMedia({
+      count: 1,
+      mediaType: ['image'],
+      sourceType: ['album', 'camera'],
+      camera: 'back',
+      success:(res) =>{        
+        const imgPath = res.tempFiles[0].tempFilePath
+        
+        that.setData({
+          imgPath:imgPath
+        })
+        
+      }
+    })
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载
